@@ -179,6 +179,7 @@ enum Browsers {
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
             backing: .buffered, defer: false
         )
+        window.isOpaque = true
         // A popup has no ContentView.dress() to tie the browser to its window;
         // tied here, before extensions hear of it (#408, lulkebit).
         browser.window = window

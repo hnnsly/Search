@@ -2583,6 +2583,9 @@ final class Browser: NSObject, ObservableObject {
         rememberSession()
         editing = false
         typed = tab.isBlank ? tab.draft : ""
+        if tab.isBlank {
+            focusRequest += 1
+        }
     }
 
     /// ⌘W closes what is in front: a peek, then a panel over the page
